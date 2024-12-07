@@ -1,0 +1,484 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Remove underline on hover */
+a {
+    text-decoration: none;
+}
+
+
+/* Navbar */
+header {
+    background: #000;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slide-down 1s ease-out;
+}
+
+.navbar .brand {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff0000;
+}
+
+/* Welcome Section */
+.hero {
+    background-color: #ffdd99; /* Light Orange for the Welcome Section */
+    color: black;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fade-in 1.5s;
+}
+
+.hero h1 {
+    font-size: 3em;
+    animation: bounce-text 2s infinite alternate;
+}
+
+.animated-button {
+    background-color: #ff6600; /* Bright Orange Button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.animated-button:hover {
+    background-color: #cc5200; /* Darker Orange */
+    transform: scale(1.1);
+}
+
+/* Categories Section */
+.categories {
+    background-color: #e6f7ff; /* Light Blue for Categories Section */
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+    animation: zoom-in 1.5s;
+}
+
+.category-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category {
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.category img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.category:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* Offers Section */
+.offers {
+    background-color: #ffcccb; /* Light Red for Offers Section */
+    padding: 50px 20px;
+    text-align: center;
+    animation: fade-in-up 1.5s;
+}
+
+.offer-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.offer-card {
+    background: white;
+    border: 1px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+}
+
+.offer-card h3 {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: fade-in-up 1.5s;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-text {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* About Us Section */
+.about-section {
+    background-color: #ffebcc; /* Soft beige for a warm, inviting feel */
+    color: #333;
+    text-align: center;
+    padding: 50px 20px;
+    animation: fade-in 1.5s ease-out;
+}
+
+.about-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.about-description {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Our Story Section */
+.our-story-section {
+    background-image: url('story-background.jpg'); /* Add an image for storytelling */
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    animation: zoom-in 1.5s;
+}
+
+.story-content {
+    background: rgba(0, 0, 0, 0.6); /* Add dark overlay for readability */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.our-story-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #ffdd99;
+}
+
+/* Our Mission Section */
+.our-mission-section {
+    background-color: #e6f7ff; /* Light Blue for a fresh and inspiring vibe */
+    color: #333;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fade-in-up 1.5s;
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.our-mission-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+/* Section Text */
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Animations (reuse existing ones) */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Order Section */
+.order-section {
+    background-color: #f9f9f9; /* Light gray for a clean, modern look */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.order-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    animation: fade-in-up 1.5s ease-in-out;
+}
+
+.order-title {
+    font-size: 2.5em;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+.order-description {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.order-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.order-form input, .order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.order-form input:focus, .order-form textarea:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(255, 102, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.animated-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: button-hover 1.5s infinite;
+}
+
+.animated-button:hover {
+    background-color: #e65c00;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes button-hover {
+    0%, 100% {
+        box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0px 6px 15px rgba(255, 102, 0, 0.8);
+    }
+}
+/* Menu Section */
+.menu-section {
+    background-color: #fff5e6; /* Light orange for a warm and appetizing look */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-header {
+    margin-bottom: 40px;
+}
+
+.menu-title {
+    font-size: 2.5em;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+.menu-description {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Menu Items */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    animation: zoom-in 1.5s ease-in-out;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    color: #ff6600;
+    margin-top: 15px;
+}
+
+.menu-item p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.menu-item .price {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes zoom-in {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+ 
